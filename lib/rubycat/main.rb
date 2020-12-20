@@ -1,5 +1,6 @@
 require_relative 'help.rb'
 require_relative 'languages.rb'
+require_relative 'header.rb'
 
 class RubyCat
     def Run
@@ -11,8 +12,21 @@ class RubyCat
         end
         
         file = argv[0]
+        lang = 0
         
-        if file.to_s.include? ".cpp"
+        PrintTopHeader(10)
+        
+        if file.to_s.include? ".cpp" 
+            lang = 1    
+            CenterText(file, "C++")    
+        else
+            lang = 0
+            CenterText(file, "Regular")
+        end
+        
+        PrintBottomHeader(10)
+        
+        if lang == 1
             File.readlines(file).each do |line|
                 CPlusPlus(line)                
             end

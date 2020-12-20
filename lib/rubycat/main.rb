@@ -17,7 +17,9 @@ class RubyCat
                 CPlusPlus(line)                
             end
         else
-            # Regular
+            File.readlines(file).each do |line|
+                Regular(line)
+            end
         end
         
         print "\n"

@@ -7,8 +7,28 @@
 
 require_relative 'colors.rb'
 
-
 class RubyCat
+    def Regular(line)
+        line = line.gsub("int", WBOLD_BLUE_COLOR + "int" + WBOLD_WHITE_COLOR)
+        line = line.gsub("long", WBOLD_BLUE_COLOR + "long" + WBOLD_WHITE_COLOR)
+        line = line.gsub("bool", WBOLD_BLUE_COLOR + "bool" + WBOLD_WHITE_COLOR)
+        line = line.gsub("char", WBOLD_BLUE_COLOR + "char" + WBOLD_WHITE_COLOR)
+        line = line.gsub("const", WBOLD_LIGHT_BLUE_COLOR + "const" + WBOLD_WHITE_COLOR)
+        line = line.gsub("void", WBOLD_RED_COLOR + "void" + WBOLD_WHITE_COLOR)
+    
+        line = line.gsub("::", WBOLD_LIGHT_YELLOW_COLOR + "::" + WBOLD_WHITE_COLOR)
+        line = line.gsub("{", WBOLD_LIGHT_YELLOW_COLOR + "{" + WBOLD_WHITE_COLOR)
+        line = line.gsub("}", WBOLD_LIGHT_YELLOW_COLOR + "}" + WBOLD_WHITE_COLOR)
+        line = line.gsub("(", WBOLD_LIGHT_YELLOW_COLOR + "(" + WBOLD_WHITE_COLOR)
+        line = line.gsub(")", WBOLD_LIGHT_YELLOW_COLOR + ")" + WBOLD_WHITE_COLOR)
+        line = line.gsub("*", WBOLD_LIGHT_YELLOW_COLOR + "*" + WBOLD_WHITE_COLOR)
+        line = line.gsub("<", WBOLD_LIGHT_YELLOW_COLOR + "<" + WBOLD_WHITE_COLOR)
+        line = line.gsub(">", WBOLD_LIGHT_YELLOW_COLOR + ">" + WBOLD_WHITE_COLOR)
+        line = line.gsub("+", WBOLD_LIGHT_YELLOW_COLOR + "+" + WBOLD_WHITE_COLOR)
+    
+        print line
+    end
+    
     def CPlusPlus(line)
         line = line.gsub("int", WBOLD_BLUE_COLOR + "int" + WBOLD_WHITE_COLOR)
 

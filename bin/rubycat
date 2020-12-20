@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# MIT License
+#
+# Copyright (c) 2020 Ferhat Geçdoğan All Rights Reserved.
+# Distributed under the terms of the MIT License.
+#
+#
+
+require_relative '../lib/rubycat.rb'
+
+cat = RubyCat.new
+
+cat.Run
